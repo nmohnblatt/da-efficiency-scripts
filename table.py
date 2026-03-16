@@ -5,7 +5,7 @@ import sys
 from tabulate import tabulate
 
 from schemes import *
-from fri import *
+from friudr import *
 
 
 def makeRow(name, scheme, tex):
@@ -66,8 +66,8 @@ table.append(makeRow("Hash", scheme, tex))
 scheme = makeHomHashBasedScheme(datasize)
 table.append(makeRow("HomHash", scheme, tex))
 
-scheme = makeFRIScheme(datasize)
-table.append(makeRow("FRI", scheme, tex))
+scheme = makeFRIUDRScheme(datasize)
+table.append(makeRow("FRI (UDR)", scheme, tex))
 
 
 if tex:

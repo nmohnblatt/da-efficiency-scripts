@@ -6,7 +6,7 @@ import csv
 import os
 
 from schemes import *
-from fri import *
+from friudr import *
 
 # the graphs will be for data sizes 
 # i*DATASIZEUNIT for every i in DATASIZERANGE
@@ -55,4 +55,4 @@ writeScheme("rs", makeKZGScheme)
 writeScheme("tensor", makeTensorScheme)
 writeScheme("hash", makeHashBasedScheme)
 writeScheme("homhash", makeHomHashBasedScheme)
-writeScheme("fri", makeFRIScheme)
+writeScheme("fri", makeFRIUDRScheme)

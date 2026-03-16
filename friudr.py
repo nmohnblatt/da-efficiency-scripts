@@ -104,7 +104,7 @@ def friNumRepetitions(rate, domainsize, fsize, batchsize, fanin):
     return math.ceil(L)
 
 
-def makeFRIScheme(datasize, invrate=4, fsize=128, verbose=False):
+def makeFRIUDRScheme(datasize, invrate=4, fsize=128, verbose=False):
     # determine k. Should be "compatible" with the fan-in
     # we need k to be at least ceil(datasize / fsize)
     minfe = math.ceil(datasize / fsize)
