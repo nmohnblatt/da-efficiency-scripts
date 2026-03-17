@@ -7,18 +7,18 @@ Note: The parameters that this script selects internally have not been audited. 
 First make sure that the `tabulate` module is installed.
 Then, you can generate tables by running
 ```
-python3 table.py <data size in MB>
+uv run table.py <data size in MB>
 ```
 For example, if you are interested in efficiency metrics for a data size of 32 Megabytes, run
 ```
-python3 table.py 32
+uv run table.py 32
 ```
 If you want to print the table as LaTeX, add the option `-l`.
 
 ## Generating Plots
 Run
 ```
-python3 graphs.py
+uv run graphs.py
 ```
 As a result, you will find csv files in `./csvdata/`
 The script will generate csv files for all schemes and the parameter ranges specified in `graphs.py`.
