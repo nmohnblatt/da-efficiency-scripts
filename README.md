@@ -49,6 +49,11 @@ Here is an example of how to plot the encoding size:
     \end{tikzpicture}
 ```
 
+For FRI-specific plots, run
+```
+uv run friplot.py
+```
+
 ## Codes
 Erasure codes (or rather their parameters) are modelled as a dataclass, see `codes.py`.
 A code maps a message to codeword. In this script, a code is therefore specified by the following parameters:

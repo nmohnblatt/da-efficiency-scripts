@@ -6,6 +6,7 @@ from tabulate import tabulate
 
 from schemes import *
 from friudr import *
+from frijohnson import *
 
 
 def makeRow(name, scheme, tex):
@@ -66,8 +67,23 @@ table.append(makeRow("Hash", scheme, tex))
 scheme = makeHomHashBasedScheme(datasize)
 table.append(makeRow("HomHash", scheme, tex))
 
-scheme = makeFRIUDRScheme(datasize)
-table.append(makeRow("FRI (UDR)", scheme, tex))
+scheme = makeFRIUDRScheme(datasize, invrate=4)
+table.append(makeRow("FRI (UDR, 1/4)", scheme, tex))
+
+scheme = makeFRIJohnsonScheme(datasize, invrate=4)
+table.append(makeRow("FRI (Johnson, 1/4)", scheme, tex))
+
+scheme = makeFRIUDRScheme(datasize, invrate=8)
+table.append(makeRow("FRI (UDR, 1/8)", scheme, tex))
+
+scheme = makeFRIJohnsonScheme(datasize, invrate=8)
+table.append(makeRow("FRI (Johnson, 1/8)", scheme, tex))
+
+scheme = makeFRIUDRScheme(datasize, invrate=16)
+table.append(makeRow("FRI (UDR, 1/16)", scheme, tex))
+
+scheme = makeFRIJohnsonScheme(datasize, invrate=16)
+table.append(makeRow("FRI (Johnson, 1/16)", scheme, tex))
 
 
 if tex:

@@ -9,6 +9,9 @@ __pycache__/
 # graph.py results
 *.csv
 
+# plot_commitment.py results
+*.png
+
 .DS_Store
 
 # Distribution / packaging
